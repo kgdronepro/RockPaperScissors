@@ -9,4 +9,54 @@ function getComputerChoice() {
   const random = choice[x];
   return random;
 }
-console.log(getComputerChoice());
+//console.log(getComputerChoice());
+// Create a function that takes player & computer selection and determines winner
+function playRound(playerSelection, computerSelection) {
+  // Compare Rock, Paper & Scissors to determine winner, loser or a tie
+  if (playerSelection === "rock" && computerSelection === "rock") {
+    console.log("you tied");
+    console.log(playerSelection);
+    console.log(computerSelection);
+  } else if (playerSelection === "paper" && computerSelection === "paper") {
+    console.log("you tied");
+    console.log(playerSelection);
+    console.log(computerSelection);
+  } else if (
+    playerSelection === "scissors" &&
+    computerSelection === "scissors"
+  ) {
+    console.log("you tied");
+    console.log(playerSelection);
+    console.log(computerSelection);
+  } //Determine who loses with conditions
+  else if (playerSelection === "rock" && computerSelection === "paper") {
+    console.log("you lose");
+    console.log(playerSelection);
+    console.log(computerSelection);
+  } else if (playerSelection === "paper" && computerSelection === "scissors") {
+    console.log("you lose");
+    console.log(playerSelection);
+    console.log(computerSelection);
+  } else if (playerSelection === "scissors" && computerSelection === "rock") {
+    console.log("you lose");
+    console.log(playerSelection);
+    console.log(computerSelection);
+  } //Determine who wins with conditions
+  else if (playerSelection === "rock" && computerSelection === "scissors") {
+    console.log("you win");
+    console.log(playerSelection);
+    console.log(computerSelection);
+  } else if (playerSelection === "paper" && computerSelection === "rock") {
+    console.log("you win");
+    console.log(playerSelection);
+    console.log(computerSelection);
+  } else if (playerSelection === "scissors" && computerSelection === "paper") {
+    console.log("you win");
+    console.log(playerSelection);
+    console.log(computerSelection);
+  }
+}
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+//getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
