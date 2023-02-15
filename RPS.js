@@ -6,6 +6,7 @@ function getComputerChoice() {
   //math.floor to make integer a whole number between 1-3
   // return random to get a random choice in the array
   const x = Math.floor(Math.random() * choice.length);
+  //*take out bottom line
   const random = choice[x];
   return random;
 }
@@ -80,7 +81,7 @@ function game() {
         computerScore
     );
   } else {
-    console.log("You tied!");
+    console.log("Game Over, you tied!");
   }
 }
-console.log(game());
+game();
